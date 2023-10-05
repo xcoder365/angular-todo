@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+<!-- {{ this is for input field }} -->
+<input type="text" placeholder="Enter New Task" #task/>
+
+<br>
+
+<br>
+
+<ul *ngFor="let item of todolist">
+<!-- {{ this is for item in todolist array and remove button }} -->
+<li>{{item.name}} <button (click)="removeTodo(item.id)">X</button></li>
+
+</ul>
+
+<button (click)="addTodo(task.value)">Add Todo</button>
